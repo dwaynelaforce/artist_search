@@ -35,6 +35,8 @@ pip install -r requirements.txt
 pip3 install -r requirements.txt
 ```
 
+Note that since the application as it stands uses no models or database, you do not need to apply migrations.
+
 Run the program:
 
 ```bash
@@ -50,6 +52,8 @@ In a web browser of your choosing, navigate to http://localhost:8000.
 The list of artist names is stored in artist_search_app/static/artist_list.txt.  When submitting a search request the app will search line by line through that file for matches.  That file can be edited to include different data, but changing the file name will break the app.  Each artist name should be without quotes and separated by a new line.  Any other special characters used as separators (such as commas) will be interpreted as part of the artist name.
 
 Most of the code is written in artist_search_app/views.py and that file has detailed comments.
+
+If you intend to deploy to production, please remember to rotate the SECRET_KEY.
 
 ## Future plans/features:
 
