@@ -1,7 +1,7 @@
 
 # ARTIST SEARCH APP
 
-Artist Search App is a simple app for searching for artists.
+Artist Search App is a simple app for searching for artists on a list.
 
 ## Installation
 
@@ -44,6 +44,20 @@ python3 manage.py runserver
 ```
 
 In a web browser of your choosing, navigate to http://localhost:8000.
+
+## Usage
+
+The list of artist names is stored in artist_search_app/static/artist_list.txt.  When submitting a search request the app will search line by line through that file for matches.  That file can be edited to include different data, but changing the file name will break the app.  Each artist name should be without quotes and separated by a new line.  Any other special characters used as separators (such as commas) will be interpreted as part of the artist name.
+
+Most of the code is written in artist_search_app/views.py and that file has detailed comments.
+
+## Future plans/features:
+
+If there is demand, the following features can be implemented:
+
+1. Refactoring the code to work with Django's included sqlite database instead of a static text file.
+2. Creating an admin page for addition/deletion of artists from the database.
+3. Adding other models/relationships to database such as music albums attributed to the artist.
 
 
 
